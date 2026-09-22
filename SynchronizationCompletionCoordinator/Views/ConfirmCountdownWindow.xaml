@@ -1,0 +1,22 @@
+﻿<Window x:Class="SynchronizationCompletionCoordinator.Views.ConfirmCountdownWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="清空确认" Height="170" Width="360"
+        WindowStartupLocation="CenterOwner" ResizeMode="NoResize"
+        ShowInTaskbar="False" Background="#FAFAFA" FontFamily="Microsoft YaHei">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="确定要清空所有单位列表吗？此操作无法撤销。"
+                   TextWrapping="Wrap" VerticalAlignment="Center" FontSize="14"/>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="BtnConfirm" Content="确认 (5)" Width="90" Height="28"
+                    Margin="0,0,10,0" IsEnabled="False" Click="BtnConfirm_Click"/>
+            <Button Content="取消" Width="70" Height="28" IsCancel="True"/>
+        </StackPanel>
+    </Grid>
+</Window>
